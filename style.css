@@ -1,0 +1,115 @@
+body{
+    background:#EBF7FA;
+    overflow:hidden;
+}
+
+hr{
+    border-top: 1px dashed #6D6F6F; 
+    width: 471px;
+    margin: auto;
+}
+
+#header{
+    color:#6D6F6F;
+    font-size:30px; 
+    text-align:center; 
+    margin-top:30px; 
+}
+
+#content{
+    margin:0px auto;
+    float:none;
+    padding:30px;
+}
+
+p{
+    text-align: center;
+}
+
+.nav{
+    display: none;
+}
+
+button{
+    margin: 5px;
+    background: #fff;
+    border-radius: 10%;
+}
+
+button span{
+    display: block;
+    color: #20BDBE;
+    font-family: 'Butterfly Kids', Arial, Helvetica, Verdana, sans-serif;
+    font-size: 18px;
+    line-height: 100%;
+}
+
+.text{
+    text-align: left;
+    margin-top: auto;
+    color:#20BDBE;
+    /* width: 300px; */
+    /*background:#fff !important; */
+}
+
+.ng-binding{
+    text-align: left;
+}
+.card{
+    width: 500px;
+    margin: auto;
+    height: 150px;
+    background:#fff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sub{
+    font-size: 12px;
+}
+
+.clicked{
+    display: none;
+}
+
+button:focus{
+    background:#20BDBE;  
+}
+
+button:focus  span {
+    color: #fff;
+}
+
+button:focus .clicked {
+    display: block;
+    margin-bottom: -18px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:focus .nonclick {
+    display: none;
+}
+
+.text,
+.image{
+    margin-top: auto;
+    margin-bottom:auto ;
+}
+
+@media only screen and (max-width: 479px){
+    .card{
+        width: 90%;
+    }
+
+    .images{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .images{
+        display: none;
+    }
+}

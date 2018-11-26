@@ -1,0 +1,99 @@
+<!-- The project uses Angular, Bootstrap to create a tab component.
+Spend 4 hours in this project. -->
+
+<!-- The mobile responsive have two problems. If I have more time, I think I can solve them.
+First: the page is not centered;
+Second: the button layout needs more time to fix. -->
+
+<!-- Drag the html file to the browser, the webpage will show on the browser. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Butterfly+Kids" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://www.w3cschool.cc/try/angularjs/1.2.5/angular.min.js"></script>
+    <script src="http://cdn.bootcss.com/angular-ui-bootstrap/0.11.2/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="test.js"></script>
+    <title>Document</title>
+</head>
+
+<body ng-app="myApp" class="row" >
+    <div class="container">
+        <!-- title -->
+        <div id = "header"><b>Why</b> Kiwico?</div>
+        <br>
+        <hr>
+
+        <!-- tab -->
+        <section class="row">
+            <section id ="content"  ng-controller="tabDemo">
+
+                <!--button nav part -->
+                <p>
+                    <button class="btn btn-sm"  ng-click="tabs[0].active = true" >
+                        <img class="nonclick"src="image/icon1-2.png" width = 42px>
+                        <img class="clicked" src="image/icon1-1.png" width = 42px>
+                        <br>
+                        <span>convenient</span>
+                    </button>
+                    <button class="btn btn-sm"  ng-click="tabs[1].active = true" >
+                        <img class="nonclick"src="image/icon2-2.png" width = 42px>
+                        <img class="clicked" src="image/icon2-1.png" width = 42px>
+                        <br>
+                        <span>sparks <br>creativity</span>
+                    </button>
+                    <button class="btn btn-sm"  ng-click="tabs[2].active = true" >
+                        <img class="nonclick"src="image/icon3-2.png" width = 42px>
+                        <img class="clicked" src="image/icon3-1.png" width = 42px>
+                        <br>
+                        <span>Educational</span>
+                    </button>
+                    <button class="btn btn-sm"  ng-click="tabs[3].active = true" >
+                        <img class="nonclick"src="image/icon4-2.png" width = 42px>
+                        <img class="clicked" src="image/icon4-1.png" width = 42px>
+                        <br>
+                        <span>Family Time</span>
+                    </button>
+                    <button class="btn btn-sm"  ng-click="tabs[4].active = true" >
+                        <img class="nonclick"src="image/icon5-2.png" width = 42px>
+                        <img class="clicked" src="image/icon5-1.png" width = 42px>
+                        <br>
+                        <span>Fun</span>
+                    </button>
+                    <button class="btn btn-sm"  ng-click="tabs[5].active = true" >
+                        <img class="nonclick"src="image/icon6-2.png" width = 22px>
+                        <img class="clicked" src="image/icon6-1.png" width = 22px>
+                        <br>
+                        <span>Alternative to<br> Screen Time</span>
+                    </button>
+
+                </p>
+
+                <!-- the content uses angular-->
+                <tabset>
+                    <tab  ng-repeat="tab in tabs" active="tab.active" disabled="tab.disabled">
+                        <tab-heading>
+                            <span>{{tab.title}}</span>
+                        </tab-heading>
+                        <div class = "card">
+                            <div class="images">
+                                <img class="col-sm-4 col-lg-4 col-md-4"  src="{{tab.images}}"style="{{tab.style}}">
+                            </div>
+                            <div class= "col-sm-8 col-lg-8 col-md-8 text">
+                                <div class="tabs"><span id = "main"><i>{{tab.content}}</i></span> </div><br>
+                                <div class="tabs"><span id="sub"><i>{{tab.subContent}}</i></span></div> 
+                            </div>
+                        </div>
+                    </tab>
+                </tabset>
+            </section>
+        </section>
+    </div>
+</body>
+</html>
